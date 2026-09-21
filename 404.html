@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not found — UMBRA</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0b0b'/><circle cx='14' cy='16' r='10' fill='%23f4f3f1'/><circle cx='21' cy='16' r='10' fill='%230b0b0b'/></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800;900&family=Bodoni+Moda:ital,wght@1,400;1,500&family=Space+Mono:wght@400;700&display=swap">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/mobile.css">
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<!-- Not a module: it has to survive a module graph that never arrives -->
+<script defer src="assets/js/boot-guard.js"></script>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+  <a class="brand" href="index.html">Umbra<sup>®</sup></a>
+  <nav class="nav" aria-label="Primary">
+    <a class="link" href="shop.html">Shop</a>
+    <a class="link" href="lookbook.html">Lookbook</a>
+    <a class="link" href="about.html">Studio</a>
+    <a class="link" href="contact.html">Contact</a>
+  </nav>
+  <div class="header__right">
+    <button class="header__action" type="button" data-bag-open>
+      Bag <span class="bag-count"><span data-bag-count>00</span></span>
+    </button>
+    <button class="burger" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="nf" id="main">
+  <div class="shell stack" style="align-items:center; gap:1.6rem">
+    <p class="label label-row">Error 404</p>
+    <h1 class="nf__code display" data-anim="chars">404</h1>
+    <p class="lede" style="text-align:center">This one was made once and is no longer here.</p>
+    <div style="display:flex; gap:.7rem; flex-wrap:wrap; justify-content:center">
+      <a class="btn btn--solid" href="index.html" data-magnetic="0.3"><span data-roll>Back home</span></a>
+      <a class="btn" href="shop.html" data-magnetic="0.3"><span data-roll>Shop the collection</span></a>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

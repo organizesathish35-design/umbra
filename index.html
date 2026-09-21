@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UMBRA — Monochrome Wardrobe</title>
+<meta name="description" content="UMBRA is a fourteen-piece monochrome wardrobe. Black, white, nothing else. Cut in Europe from natural fibre, made to outlast the season.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230b0b0b'/><circle cx='14' cy='16' r='10' fill='%23f4f3f1'/><circle cx='21' cy='16' r='10' fill='%230b0b0b'/></svg>">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="UMBRA — Monochrome Wardrobe">
+<meta property="og:description" content="Fourteen pieces. Black, white, nothing else.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800;900&family=Bodoni+Moda:ital,wght@1,400;1,500&family=Space+Mono:wght@400;700&display=swap">
+
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/mobile.css">
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<!-- Not a module: it has to survive a module graph that never arrives -->
+<script defer src="assets/js/boot-guard.js"></script>
+<script type="module" src="assets/js/main.js"></script>
+</head>
+
+<body data-page="home">
+
+<!-- Preloader lives in the markup so there is no flash before JS boots -->
+<div class="loader" role="status" aria-label="Loading">
+  <div class="loader__word" aria-hidden="true">
+    <span class="loader__letter">U</span><span class="loader__letter">M</span><span class="loader__letter">B</span><span class="loader__letter">R</span><span class="loader__letter">A</span>
+  </div>
+  <div class="loader__meta">
+    <span>Drop I — Spring / Summer 2026</span>
+    <span class="loader__count">000</span>
+  </div>
+  <i class="loader__bar"></i>
+</div>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="header">
+  <a class="brand" href="index.html" data-transition-label="Umbra">Umbra<sup>®</sup></a>
+  <nav class="nav" aria-label="Primary">
+    <a class="link" href="shop.html">Shop</a>
+    <a class="link" href="lookbook.html">Lookbook</a>
+    <a class="link" href="about.html">Studio</a>
+    <a class="link" href="contact.html">Contact</a>
+  </nav>
+  <div class="header__right">
+    <button class="header__action" type="button" data-bag-open>
+      Bag <span class="bag-count"><span data-bag-count>00</span></span>
+    </button>
+    <button class="burger" type="button" data-menu-toggle aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<noscript><p class="noscript-note">This site uses JavaScript for its motion and bag. Core content and links still work without it.</p></noscript>
+
+<main id="main">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" data-parallax-scope data-fx="exit" data-fx-amount="0.85">
+    <div class="hero__stage" data-anim>
+      <img src="https://images.unsplash.com/photo-1568252542512-9fe8fe9c87bb?auto=format&fit=crop&q=75&sat=-100&w=900&h=1200"
+           alt="Model in the Silhouette bias dress, photographed in black and white" fetchpriority="high" decoding="async">
+    </div>
+
+    <p class="hero__note hero__note--a" data-anim>No colour. No logo. No noise.</p>
+    <p class="hero__note hero__note--b" data-anim>Fourteen pieces, cut in Europe.</p>
+
+    <div class="hero__type">
+      <span class="hero__line" data-anim>Wear the</span>
+      <span class="hero__line hero__line--indent" data-anim>Silence</span>
+    </div>
+
+    <div class="hero__foot" data-anim>
+      <div class="hero__scroll"><i></i><span>Scroll</span></div>
+      <p class="label" style="max-width:22ch">Drop I — Spring / Summer 2026. Released in one batch, never restocked.</p>
+      <a class="btn" href="shop.html" data-magnetic="0.3" data-transition-label="Shop">
+        <span data-roll>See the collection</span>
+        <svg class="btn__arrow" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================ TICKER ============================ -->
+  <div class="ticker marquee" data-velocity aria-hidden="true" style="--marquee-gap:3vw">
+    <div class="marquee__track">
+      <span class="marquee__item">Free shipping over £250</span>
+      <span class="marquee__item">◦</span>
+      <span class="marquee__item">30-day returns</span>
+      <span class="marquee__item">◦</span>
+      <span class="marquee__item">Natural fibre only</span>
+      <span class="marquee__item">◦</span>
+      <span class="marquee__item">Cut &amp; sewn in Europe</span>
+      <span class="marquee__item">◦</span>
+      <span class="marquee__item">One batch, never restocked</span>
+      <span class="marquee__item">◦</span>
+      <span class="marquee__item">Drop I available now</span>
+      <span class="marquee__item">◦</span>
+    </div>
+  </div>
+
+  <!-- ============================ MANIFESTO ============================ -->
+  <section class="manifesto block">
+    <div class="shell">
+      <div class="manifesto__head">
+        <div class="manifesto__title">
+          <p class="label label-row" data-anim="fade" style="margin-bottom:2rem">01 — Position</p>
+          <h2 class="display" data-fx="highlight">The absence of colour is not a limitation. It is the <em class="serif">whole</em> decision.</h2>
+        </div>
+        <div class="manifesto__aside">
+          <p class="body-copy" data-anim="fade" data-delay="0.15">
+            Every season the industry adds. We subtract. What is left is a wardrobe of fourteen
+            pieces that work against each other in any order, in two colours that never date.
+          </p>
+          <a class="link" href="about.html" data-delay="0.25" data-anim="fade" data-transition-label="Studio">Read the studio notes</a>
+        </div>
+      </div>
+
+      <div class="stat-strip" data-anim="stagger" data-stagger="0.1">
+        <div class="stat">
+          <span class="stat__num"><span data-count="14">0</span></span>
+          <span class="stat__label">Pieces in the collection</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num"><span data-count="100">0</span><i class="stat__suffix">%</i></span>
+          <span class="stat__label">Natural fibre, no blends</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num"><span data-count="2">0</span></span>
+          <span class="stat__label">Colours, permanently</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num"><span data-count="30">0</span></span>
+          <span class="stat__label">Day returns, our cost</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ HORIZONTAL RAIL ============================ -->
+  <section class="rail">
+    <div class="rail__viewport">
+      <div class="rail__track">
+        <div class="rail__intro">
+          <p class="label label-row">02 — The collection</p>
+          <h2 class="display">Drop I</h2>
+          <p class="body-copy">
+            Six of the fourteen, in the order we made them. Drag or keep scrolling —
+            the rail moves with the page.
+          </p>
+          <a class="btn" href="shop.html" data-magnetic="0.3"><span data-roll>Shop all fourteen</span></a>
+        </div>
+
+        <div style="display:contents" data-rail-cards></div>
+
+        <div class="rail__outro">
+          <h3 class="display" style="font-size:var(--t-xl)">Made in one batch. When it is gone, it is gone.</h3>
+          <p class="body-copy">No restocks, no mid-season markdowns, no colour you will regret.</p>
+          <a class="link" href="shop.html">Shop the drop</a>
+        </div>
+      </div>
+    </div>
+    <div class="rail__bar" aria-hidden="true"><i></i></div>
+  </section>
+
+  <!-- ============================ DARK SLAB ============================ -->
+  <div class="scallop scallop--down" aria-hidden="true" style="--scallop-color:var(--ink)">
+    <i class="scallop__dot"></i><i class="scallop__dot"></i><i class="scallop__dot"></i>
+    <i class="scallop__dot"></i><i class="scallop__dot"></i><i class="scallop__dot"></i>
+    <i class="scallop__dot"></i>
+  </div>
+
+  <section class="slab" data-theme="dark">
+    <span class="slab__ghost slab__ghost--top" aria-hidden="true">Black — White — Black — White —</span>
+    <span class="slab__ghost slab__ghost--bottom" aria-hidden="true">Umbra — Umbra — Umbra — Umbra —</span>
+
+    <div class="shell">
+      <h2 class="slab__statement" data-fx="highlight" data-fx-from="top 82%" data-fx-to="bottom 58%">
+        We make <em>fourteen</em> things. We make them until they are right, then we stop.
+      </h2>
+      <div class="slab__foot" data-anim="stagger" data-stagger="0.09">
+        <span class="chip" style="border-color:rgba(244,243,241,.28)">Organic cotton</span>
+        <span class="chip" style="border-color:rgba(244,243,241,.28)">Undyed merino</span>
+        <span class="chip" style="border-color:rgba(244,243,241,.28)">Belgian flax</span>
+        <span class="chip" style="border-color:rgba(244,243,241,.28)">Italian melton</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="scallop scallop--up" aria-hidden="true" style="--scallop-color:var(--ink)">
+    <i class="scallop__dot"></i><i class="scallop__dot"></i><i class="scallop__dot"></i>
+    <i class="scallop__dot"></i><i class="scallop__dot"></i><i class="scallop__dot"></i>
+    <i class="scallop__dot"></i>
+  </div>
+
+  <!-- ============================ CRAFT ============================ -->
+  <section class="block">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="label label-row" data-anim="fade" style="margin-bottom:1.6rem">03 — How it is made</p>
+          <h2 class="display" data-anim="lines">Four steps, none of them fast</h2>
+        </div>
+      </div>
+
+      <div class="craft">
+        <div class="craft__sticky reveal-img">
+          <span class="craft__frame" aria-hidden="true"></span>
+          <img class="is-active" src="https://images.unsplash.com/photo-1556630184-066f7ac4e15f?auto=format&fit=crop&q=72&sat=-100&w=900&h=1200" alt="Folded tee in raw cotton" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1633292587737-f898a032e562?auto=format&fit=crop&q=72&sat=-100&w=900&h=1200" alt="Black loopback fleece detail" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1637102146291-c408b298e22b?auto=format&fit=crop&q=72&sat=-100&w=900&h=1200" alt="Brushed lambswool scarf" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1621773881532-fe65715b5137?auto=format&fit=crop&q=72&sat=-100&w=900&h=1200" alt="Poplin shirt on a rail" loading="lazy">
+        </div>
+
+        <div class="craft__chapters">
+          <article class="craft__chapter is-active">
+            <span class="craft__num">01 / Fibre</span>
+            <h3 class="display">We buy the cloth first</h3>
+            <p class="body-copy">Long-staple organic cotton from Porto, undyed merino from Hawick, flax from Normandy. The mill is chosen before the pattern exists — the cloth decides what the garment can be.</p>
+          </article>
+          <article class="craft__chapter">
+            <span class="craft__num">02 / Colour</span>
+            <h3 class="display">Three passes to black</h3>
+            <p class="body-copy">A single dye bath gives you a black that turns brown in eighteen months. We run three, and hold the batch back if the depth is off by a shade.</p>
+          </article>
+          <article class="craft__chapter">
+            <span class="craft__num">03 / Cut</span>
+            <h3 class="display">One block, revised eleven times</h3>
+            <p class="body-copy">Every piece shares a shoulder and a hem so the collection layers cleanly. The Zero tee took eleven toiles before the shoulder seam sat where we wanted it.</p>
+          </article>
+          <article class="craft__chapter">
+            <span class="craft__num">04 / Finish</span>
+            <h3 class="display">Washed twice, pressed once</h3>
+            <p class="body-copy">Garments are washed before they ship so they arrive at their final dimensions. What you take out of the box is what it will be in three years.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ NEW IN ============================ -->
+  <section class="block-s">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="label label-row" data-anim="fade" style="margin-bottom:1.6rem">04 — New in</p>
+          <h2 class="display" data-anim="lines">Just cut</h2>
+        </div>
+        <a class="link" href="shop.html" data-transition-label="Shop">All pieces</a>
+      </div>
+      <div class="grid-products" data-featured data-fx-lift></div>
+    </div>
+  </section>
+
+  <!-- ============================ EDITORIAL ============================ -->
+  <section class="block">
+    <div class="shell">
+      <div class="editorial editorial--flip">
+        <div class="editorial__media reveal-img" data-fx="clip" data-fx-scope>
+          <img src="https://images.unsplash.com/photo-1613915617430-8ab0fd7c6baf?auto=format&fit=crop&q=72&sat=-100&w=1100&h=1375"
+               alt="Look 03 — the Atelier trench with wide trousers" loading="lazy"
+               data-fx="drift" data-fx-amount="0.16">
+        </div>
+        <div class="editorial__body">
+          <p class="label label-row" data-anim="fade">05 — Lookbook</p>
+          <h2 class="display t-huge" data-anim="lines">Eight looks, one palette</h2>
+          <p class="body-copy" data-anim="fade" data-delay="0.1">
+            Shot in a bare studio in Hackney over two days, with no styling beyond the clothes.
+            Every look is built only from pieces in this drop.
+          </p>
+          <a class="btn" href="lookbook.html" data-magnetic="0.3" data-transition-label="Lookbook">
+            <span data-roll>View the lookbook</span>
+            <svg class="btn__arrow" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ REVIEWS ============================ -->
+  <section class="reviews block-s">
+    <div class="shell">
+      <div class="section-head">
+        <div>
+          <p class="label label-row" data-anim="fade" style="margin-bottom:1.6rem">06 — Worn by</p>
+          <h2 class="display" data-anim="lines">What they say</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee" data-velocity style="--marquee-gap:1.2vw; --speed:44s">
+      <div class="marquee__track" data-reviews></div>
+    </div>
+    <div class="marquee marquee--reverse" data-velocity style="--marquee-gap:1.2vw; --speed:52s; margin-top:1rem">
+      <div class="marquee__track" data-reviews></div>
+    </div>
+  </section>
+
+  <!-- ============================ CTA ============================ -->
+  <section class="block">
+    <div class="shell">
+      <div class="cta-grid">
+        <div class="cta-card" data-anim="fade">
+          <i class="cta-card__dot"></i><i class="cta-card__dot"></i><i class="cta-card__dot"></i><i class="cta-card__dot"></i>
+          <p class="label label-row">07 — The drop</p>
+          <h2 class="display">One batch. Then it is gone.</h2>
+          <p class="body-copy">Drop I is made in a run of 400 per piece. We do not restock, and we do not discount. Take the size you want while it is there.</p>
+          <div style="display:flex; gap:.7rem; flex-wrap:wrap">
+            <a class="btn btn--solid" href="shop.html" data-magnetic="0.3"><span data-roll>Shop Drop I</span></a>
+            <a class="btn" href="about.html" data-magnetic="0.3"><span data-roll>Our story</span></a>
+          </div>
+        </div>
+        <div class="cta-card cta-card--media reveal-img" data-fx="clip" data-fx-scope>
+          <img src="https://images.unsplash.com/photo-1638337935003-e17cf483ca8d?auto=format&fit=crop&q=72&sat=-100&w=1100&h=1400"
+               alt="The Monolith wool overcoat" loading="lazy"
+               data-fx="drift" data-fx-amount="0.14">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" data-theme="dark">
+  <canvas class="footer__canvas" aria-label="Interactive woven mesh. Drag your pointer through it to move the threads." role="img"></canvas>
+  <p class="footer__hint">Drag the weave — threads snapped <b data-threads>00</b></p>
+
+  <div class="footer__inner">
+    <div class="shell">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h4>Newsletter</h4>
+          <form data-signup novalidate>
+            <div class="signup">
+              <input type="email" name="email" placeholder="your@email.com" aria-label="Email address" required>
+              <button type="submit">Join</button>
+            </div>
+          </form>
+          <p class="signup__msg" data-signup-msg></p>
+        </div>
+        <div class="footer__col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">All pieces</a></li>
+            <li><a href="shop.html?category=outerwear">Outerwear</a></li>
+            <li><a href="shop.html?category=knitwear">Knitwear</a></li>
+            <li><a href="shop.html?category=tops">Tops</a></li>
+            <li><a href="shop.html?category=accessories">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>House</h4>
+          <ul>
+            <li><a href="about.html">Studio</a></li>
+            <li><a href="lookbook.html">Lookbook</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html#faq">Shipping &amp; returns</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Elsewhere</h4>
+          <ul>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+            <li><a href="mailto:studio@umbra.supply">studio@umbra.supply</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer__wordmark" aria-hidden="true">Umbra</p>
+
+  <div class="footer__base">
+    <span>© 2026 Umbra Supply Co.</span>
+    <span>London — Porto — Hawick</span>
+    <span>Demo store — no orders are processed</span>
+  </div>
+</footer>
+
+</body>
+</html>

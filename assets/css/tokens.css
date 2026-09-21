@@ -1,0 +1,86 @@
+/* ============================================================
+   UMBRA — Design Tokens
+   Single source of truth for colour, type, space, motion.
+   ============================================================ */
+
+:root {
+  /* ---- Colour: strictly monochrome ---- */
+  --paper:        #f4f3f1;   /* page background, warm off-white */
+  --paper-pure:   #ffffff;
+  --ink:          #0b0b0b;   /* near-black, never pure #000 for text */
+  --ink-soft:     #1a1a1a;
+  --ash:          #6f6f6f;   /* secondary text */
+  --ash-light:    #a8a8a8;
+  --line:         rgba(11, 11, 11, 0.14);
+  --line-soft:    rgba(11, 11, 11, 0.07);
+  --veil:         rgba(11, 11, 11, 0.55);
+
+  /* Inverted set — applied by [data-theme="dark"] */
+  --bg:           var(--paper);
+  --fg:           var(--ink);
+  --fg-dim:       var(--ash);
+  --rule:         var(--line);
+  --rule-soft:    var(--line-soft);
+
+  /* ---- Type ---- */
+  --font-display: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --font-serif:   "Bodoni Moda", "Times New Roman", serif;
+  --font-mono:    "Space Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  /* Fluid scale — vw driven like the reference, clamped for sanity */
+  --t-mega:   clamp(3.2rem, 15.5vw, 17rem);   /* full-bleed statements  */
+  --t-giant:  clamp(2.2rem, 6.4vw, 7rem);     /* section headlines      */
+  --t-huge:   clamp(1.9rem, 4.6vw, 4.6rem);   /* sub headlines          */
+  --t-xl:     clamp(1.6rem, 3.4vw, 3.2rem);
+  --t-lg:     clamp(1.25rem, 2.1vw, 1.9rem);
+  --t-md:     clamp(1rem, 1.25vw, 1.15rem);
+  --t-sm:     clamp(0.82rem, 0.92vw, 0.9rem);
+  --t-xs:     clamp(0.66rem, 0.74vw, 0.74rem);
+
+  --track-tight: -0.045em;
+  --track-wide:  0.16em;
+  --track-mega:  0.34em;
+
+  /* ---- Space ---- */
+  --gutter:    clamp(1.15rem, 3.2vw, 3.4rem);
+  --block:     clamp(4.5rem, 11vw, 11rem);
+  --block-sm:  clamp(2.6rem, 6vw, 6rem);
+  --maxw:      1760px;
+
+  /* ---- Motion ---- */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-soft:  cubic-bezier(0.25, 1, 0.5, 1);
+  --dur-fast:   0.32s;
+  --dur:        0.62s;
+  --dur-slow:   1.05s;
+
+  /* ---- Elevation / misc ---- */
+  --radius:     2px;
+  --radius-lg:  clamp(10px, 1.4vw, 22px);
+  --z-cursor:   9000;
+  --z-loader:   8000;
+  --z-transit:  7500;
+  --z-menu:     7000;
+  --z-drawer:   6800;
+  --z-header:   6000;
+}
+
+/* Inverted surfaces: any element can opt into the dark palette */
+[data-theme="dark"] {
+  --bg:        var(--ink);
+  --fg:        var(--paper);
+  --fg-dim:    var(--ash-light);
+  --rule:      rgba(244, 243, 241, 0.18);
+  --rule-soft: rgba(244, 243, 241, 0.08);
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0.01s;
+    --dur: 0.01s;
+    --dur-slow: 0.01s;
+  }
+}
